@@ -218,6 +218,5 @@ const app = new Vue({
         const date = new Date()
         console.log(date.getFullYear())
         console.log(this.search)
-
     },
 })

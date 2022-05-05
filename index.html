@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+
     <!-- VUE.JS  -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!--END VUE.JS  -->
@@ -127,7 +128,11 @@
                     <!-- messages  -->
                     <div class="messages">
                         <div v-for=" (sms, index) in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
+                            
                             <div class="sms" :class="sms.status">
+                                <div class="delete-options">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
                                 <p>{{sms.message}}</p>
                                 <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>
                             </div>

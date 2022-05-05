@@ -252,6 +252,18 @@ input{
 .smscontainer.sent{
     text-align: end;
 }
+
+.delete-options{
+    position: absolute;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.sms:hover .delete-options{
+    display: inline-block;
+}
+
 /* end messages-container */
 
 
