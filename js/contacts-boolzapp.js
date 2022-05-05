@@ -175,7 +175,8 @@ const app = new Vue({
 
         },
         search :"",
-        hideChevron: false
+        hideChevron: false,
+        bot: ["Ottimo!", "Ma non mi dire", "Grande", "Come stai?", "Ciao!", "Va bene", "Perchè no..." , "Scusami ora non ho tempo ti scrivo dopo","Sono a lavoro ti richiamo!", "mamma mia"]
 
     },
     
@@ -207,15 +208,47 @@ const app = new Vue({
             this.contacts[this.clickedChat].messages.push(topush)
             this.inputSms.message = ""
 
+            setTimeout(()=>{this.botsmsers()}, 2000)
+
         },
 
         deletes(index){
             console.log(index)
-            // const canvas = {...this.clickedChat}
             if(confirm("Vuoi cancellare il messaggio?"))this.contacts[this.clickedChat].messages[index].message = ""
-            // this.clickedChat = canvas
-            
         },
+
+        botsmsers(){
+            const date = new Date()
+            //get the time 
+            let s = date.getSeconds()
+            let m = date.getMinutes()
+            let h = date.getHours()
+            //set time 
+            if(s<10){ s = "0"+s}
+            if(m<10){ m = "0"+m}
+            if(h<10){ h = "0"+h}
+
+            console.log(h,m)
+
+            //get date
+            let day = date.getDay()
+            let mounth = date.getMonth()
+            let year = date.getFullYear()
+            if(day<10){ day = "0"+day}
+            if(mounth<10){ mounth = "0"+mounth}
+
+            const frase = Math.floor(Math.random()*this.bot.length)
+
+
+            const messageFromBot = {
+                    date: day + "/" + mounth + "/" + year + " " + h + ":" + m +":" + s,
+                    message: this.bot[frase],
+                    status: 'received'
+            }
+            this.contacts[this.clickedChat].messages.push(messageFromBot)
+
+
+        }
 
        
     },
@@ -227,6 +260,6 @@ const app = new Vue({
         console.log(this.search)
 
             // this.contacts[this.clickedChat].messages.splice(1,1)
-            console.log()
+            
     },
 })
