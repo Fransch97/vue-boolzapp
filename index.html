@@ -123,16 +123,13 @@
 
                 <div class="messages-container">
                     <div class="messages">
-                        <div class="smscontainer sent">
-                            <div class="sms sent">
-                                <p>Tutto fatto!</p>
+                        <div v-for=" sms in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
+                            <div class="sms" :class="sms.status">
+                                <p>{{sms.message}}</p>
                                 <span>16:15</span>
                             </div>
                         </div>
-                        <div class="sms">
-                            <p>Tutto fatto!</p>
-                            <span>16:15</span>
-                        </div>
+                        
                         
                     </div>
                     <div class="write-tools">
