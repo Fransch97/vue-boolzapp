@@ -71,20 +71,20 @@
                     <button class="float-left">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input class="float-left" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input class="float-left" v-model = "search"type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- end search tools -->
 
                 <!-- open-chronology -->
                 <div  class="open-chronology">
-                    <div v-for="(contact, index) in contacts" @click="clickedChat = index" class="profile-openchat">
+                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.includes(search) " @click="clickedChat = index" class="profile-openchat">
                         <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
                             <br>
                             <span class="last-sms">{{contact.messages[1].message}}</span>
                         </div>
-                        <div class="date"><span>{{contact.messages[1].date.slice( 0, 11)}}</span></div>
+                        <div class="date"><span>{{contact.messages[1].date.slice(11)}}</span></div>
                     </div>
                 </div>
                 <!--END open-chronology -->
@@ -123,10 +123,10 @@
 
                 <div class="messages-container">
                     <div class="messages">
-                        <div v-for=" sms in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
+                        <div v-for=" (sms, index) in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
                             <div class="sms" :class="sms.status">
                                 <p>{{sms.message}}</p>
-                                <span>16:15</span>
+                                <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>
                             </div>
                         </div>
                         
@@ -141,11 +141,6 @@
 
             </div>
             <!--END THE CHAT  -->
-
-
-
-
-
 
         </div>
         <!-- END APP  -->

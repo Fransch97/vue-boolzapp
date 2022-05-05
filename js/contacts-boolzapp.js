@@ -173,7 +173,9 @@ const app = new Vue({
             message: '',
             status: 'sent'
 
-        }
+        },
+        search :""
+
     },
     
 
