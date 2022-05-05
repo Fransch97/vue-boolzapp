@@ -34,7 +34,7 @@ header{
 /* CHATS  */
 .app-chats{
     width: 30%;
-
+    border-right: solid 1px rgb(229, 225, 225);
 }
 /* profile and options */
 .profile-options{
@@ -61,7 +61,10 @@ img{
     color: #afafaf;
 }
 
+/* end profile and options */
 
+
+/* notification  */
 .notification{
     background-color: #8edafc;
     display: flex;
@@ -85,6 +88,33 @@ img{
 }
 .notification-text a{
     color: gray;
+}
+/* end notification  */
+
+
+/* search-tool */
+.search-tools{
+    padding: 10px;
+    background-color: #fafafa;
+    display: flex;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.float-left{
+    float: left;
+}
+.search-tools button,input{
+    color: #dadad3;
+    background-color: white;
+    border: solid 1px #EAEAEA;
+    font-size: 20px;
+    padding: 8px 20px;
+}
+input{
+    flex-grow: 1;
 }
 
 /*END APP  */
