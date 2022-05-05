@@ -29,6 +29,9 @@ header{
     height: 95vh;
     width: 80%;
     background-color: white;
+    min-width: 800px;
+    min-height: 500px;
+    display: flex;
 }
 
 /*APP CHAT'S  */
@@ -124,13 +127,13 @@ input{
 
 /*open-chronology */
 .open-chronology{
-    flex-shrink: 1;
     overflow: auto;
 }
 .profile-openchat{
     display: flex;
     align-items: center;
     padding: 15px 10px;
+    border-top: solid 1px rgb(229, 225, 225);
     /* background-color: #8edafc; */
 }
 
@@ -157,9 +160,31 @@ input{
     height: 60px;
 }
 /*END open-chronology */
-
-
 /*END APP CHAT'S  */
 
+
+
+
+/* THE CHAT MODE  */
+.chatmode{
+    width: 70%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.chat-contact-options{
+    background-color: #EAEAEA;
+    width: 100%;
+}
+.profile-chatmode{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+}
+.profile-chatmode img{
+    margin-right: 10px;
+}
+/*END  THE CHAT MODE  */
 
 /*END APP  */
