@@ -121,6 +121,8 @@ img{
 }
 input{
     flex-grow: 1;
+    font-size: 14px;
+    color: black;
 }
 /*end search-tool */
 
@@ -166,6 +168,8 @@ input{
 
 
 /* THE CHAT MODE  */
+
+/* profile chatmode  */
 .chatmode{
     width: 70%;
     background-color: red;
@@ -175,7 +179,8 @@ input{
 }
 .chat-contact-options{
     background-color: #EAEAEA;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .profile-chatmode{
     display: flex;
@@ -184,7 +189,40 @@ input{
 }
 .profile-chatmode img{
     margin-right: 10px;
+
 }
+/*end profile chatmode  */
+
+/* messages-container */
+.messages-container{
+    background-image: url(img/mine.jpg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.messages{
+    flex-grow: 1;
+}
+.write-tools{
+    display: flex;
+    align-items: center;
+    background-color: #f3eeea;
+    padding: 10px 0;
+}
+.write-tools i{
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+}
+.write-tools input{
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+/* end messages-container */
+
+
+
+
 /*END  THE CHAT MODE  */
 
 /*END APP  */

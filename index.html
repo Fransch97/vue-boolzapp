@@ -97,6 +97,7 @@
 
             <!-- THE CHAT MODE -->
             <div class="chatmode">
+                <!-- chat-contact-options -->
                 <div class="chat-contact-options">
                     <!-- profile chatmode -->
                     <div class="profile-chatmode ">
@@ -106,8 +107,27 @@
                             <br>
                             <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice( 0, 11)}}</span>
                         </div>
-                    </div>
                     <!--end profile  -->
+                </div>
+                <!--end chat-contact-options -->
+
+                <!-- chatmode-options  -->
+                <div class="options my-profile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <!--end chatmode-options  -->
+
+                </div>
+
+                <div class="messages-container">
+                    <div class="messages"></div>
+                    <div class="write-tools">
+                        <i class="fa-solid fa-face-laugh-squint"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
                 </div>
 
             </div>
