@@ -1,0 +1,31 @@
+/* GENERALS  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dadad3;
+}
+/*END GENERALS  */
+/* 569486 */
+
+/* HEADER  */
+header{
+    background-color: #569486;
+    height: 15vh;
+}
+
+/*END HEADER  */
+
+/* APP  */
+#app{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80vh;
+    background-color: white;
+    width: 80%;
+}
+/*END APP  */
