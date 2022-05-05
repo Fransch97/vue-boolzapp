@@ -212,7 +212,7 @@ const app = new Vue({
         deletes(index){
             console.log(index)
             // const canvas = {...this.clickedChat}
-            this.contacts[this.clickedChat].messages.splice(index,1)
+            if(confirm("Vuoi cancellare il messaggio?"))this.contacts[this.clickedChat].messages[index].message = ""
             // this.clickedChat = canvas
             
         },

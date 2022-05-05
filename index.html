@@ -127,11 +127,13 @@
                 <div class="messages-container">
                     <!-- messages  -->
                     <div class="messages">
-                        <div v-if="contacts[clickedChat].messages.length > 0"
+                        <div 
                              v-for=" (smsi, index) in contacts[clickedChat].messages" 
-                             class="smscontainer " :class="smsi.status">
+                             class="smscontainer " :class="smsi.status"
+                             v-if="smsi.message != ''"
+                             >
                             
-                            <div class="sms" :class="smsi.status">
+                            <div  class="sms" :class="smsi.status">
                                 <div class="delete-options" @click = "hideChevron = !hideChevron">
                                     <i class="fa-solid fa-chevron-down"></i>
                                     <ul v-if="hideChevron">
@@ -143,7 +145,6 @@
                                 <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>
                             </div>
                         </div>
-                        <div class="div" v-else="">lalala</div>
                     </div>
                     <!--end messages  -->
 
