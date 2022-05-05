@@ -167,14 +167,50 @@ const app = new Vue({
             }
         ],
         //END bootzapp
-        clickedChat : 0
+        clickedChat : 0,
+        inputSms:{
+            date: '',
+            message: '',
+            status: 'sent'
+
+        }
     },
+    
 
     methods: {
-        
+        sendSms(){
+            const date = new Date()
+            //get the time 
+            let s = date.getSeconds()
+            let m = date.getMinutes()
+            let h = date.getHours()
+            //set time 
+            if(s<10){ s = "0"+s}
+            if(m<10){ m = "0"+m}
+            if(h<10){ h = "0"+h}
+
+            console.log(h,m)
+
+            //get date
+            let day = date.getDay()
+            let mounth = date.getMonth()
+            let year = date.getFullYear()
+            if(day<10){ day = "0"+day}
+            if(mounth<10){ mounth = "0"+mounth}
+
+            //clone
+            const topush = {...this.inputSms}
+            topush.date = day + "/" + mounth + "/" + year + " " + h + ":" + m +":" + s
+            this.contacts[this.clickedChat].messages.push(topush)
+            this.inputSms.message = ""
+
+        }
     },
 
     mounted() {
         console.log("im working")
+        const date = new Date()
+        console.log(date.getFullYear())
+
     },
 })

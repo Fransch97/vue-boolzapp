@@ -105,7 +105,7 @@
                         <div class="user">
                             <span class="nome">{{contacts[clickedChat].name}}</span>
                             <br>
-                            <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice( 0, 11)}}</span>
+                            <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice(11)}}</span>
                         </div>
                     <!--end profile  -->
                 </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="write-tools">
                         <i class="fa-solid fa-face-laugh-squint"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" v-model="inputSms.message" @keyup.enter="sendSms()" placeholder="Scrivi un messaggio">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
