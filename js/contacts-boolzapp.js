@@ -209,8 +209,12 @@ const app = new Vue({
 
         },
 
-        consolelog(){
-            console.log(this.search)
+        deletes(index){
+            console.log(index)
+            // const canvas = {...this.clickedChat}
+            this.contacts[this.clickedChat].messages.splice(index,1)
+            // this.clickedChat = canvas
+            
         },
 
        
@@ -221,5 +225,8 @@ const app = new Vue({
         const date = new Date()
         console.log(date.getFullYear())
         console.log(this.search)
+
+            // this.contacts[this.clickedChat].messages.splice(1,1)
+            console.log()
     },
 })
