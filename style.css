@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 body{
     background-color: #dadad3;
@@ -12,7 +13,7 @@ body{
 
 /* HEADER  */
 header{
-    background-color: #569486;
+    background-color: #009688;
     height: 15vh;
 }
 
@@ -20,22 +21,26 @@ header{
 
 /* APP  */
 
-/* chats  */
 #app{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 80vh;
+    height: 95vh;
     width: 80%;
     background-color: white;
 }
 
+/* CHATS  */
+.app-chats{
+    width: 30%;
+
+}
+/* profile and options */
 .profile-options{
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    background-color: #e9e9e9;
+    background-color: #EAEAEA;
 }
 img{
     width: 50px;
@@ -56,5 +61,30 @@ img{
     color: #afafaf;
 }
 
+
+.notification{
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8edafc;
+    margin-right: 10px;
+}
+.bell i{
+    font-size: 25px;
+
+}
+.notification-text a{
+    color: gray;
+}
 
 /*END APP  */
