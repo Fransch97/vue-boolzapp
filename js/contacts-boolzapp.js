@@ -174,7 +174,8 @@ const app = new Vue({
             status: 'sent'
 
         },
-        search :""
+        search :"",
+        hideChevron: false
 
     },
     
@@ -210,7 +211,9 @@ const app = new Vue({
 
         consolelog(){
             console.log(this.search)
-        }
+        },
+
+       
     },
 
     mounted() {

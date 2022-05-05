@@ -130,8 +130,12 @@
                         <div v-for=" (sms, index) in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
                             
                             <div class="sms" :class="sms.status">
-                                <div class="delete-options">
+                                <div class="delete-options" @click = "hideChevron = !hideChevron">
                                     <i class="fa-solid fa-chevron-down"></i>
+                                    <ul v-if="hideChevron">
+                                        <li>cancella messaggio</li>
+                                        <li>informazioni messaggio</li>
+                                    </ul>
                                 </div>
                                 <p>{{sms.message}}</p>
                                 <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>

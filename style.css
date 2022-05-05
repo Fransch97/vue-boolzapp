@@ -264,6 +264,18 @@ input{
     display: inline-block;
 }
 
+ul{
+    background-color: white;
+    padding: 20px;
+    border: solid #dadad3 1px;
+}
+li{
+    list-style: none;
+    padding: 10px;
+    border-bottom:solid #dadad3 1px ;
+    text-align: start;
+}
+
 /* end messages-container */
 
 
