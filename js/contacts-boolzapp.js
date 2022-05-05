@@ -206,6 +206,10 @@ const app = new Vue({
             this.contacts[this.clickedChat].messages.push(topush)
             this.inputSms.message = ""
 
+        },
+
+        consolelog(){
+            console.log(this.search)
         }
     },
 
@@ -213,6 +217,7 @@ const app = new Vue({
         console.log("im working")
         const date = new Date()
         console.log(date.getFullYear())
+        console.log(this.search)
 
     },
 })

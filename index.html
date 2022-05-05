@@ -71,13 +71,13 @@
                     <button class="float-left">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input class="float-left" v-model = "search"type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input class="float-left" @keyup.enter="consolelog" v-model = "search"type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- end search tools -->
 
                 <!-- open-chronology -->
                 <div  class="open-chronology">
-                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.includes(search) " @click="clickedChat = index" class="profile-openchat">
+                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.includes(search) || contact.name.charAt(0).includes(search) " @click="clickedChat = index" class="profile-openchat">
                         <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
@@ -99,29 +99,32 @@
             <div class="chatmode">
                 <!-- chat-contact-options -->
                 <div class="chat-contact-options">
-                    <!-- profile chatmode -->
-                    <div class="profile-chatmode ">
-                        <img :src="'img/avatar'+contacts[clickedChat].avatar+'.jpg'" alt="">
-                        <div class="user">
-                            <span class="nome">{{contacts[clickedChat].name}}</span>
-                            <br>
-                            <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice(11)}}</span>
-                        </div>
-                    <!--end profile  -->
+                        <!-- profile chatmode -->
+                        <div class="profile-chatmode ">
+                            <img :src="'img/avatar'+contacts[clickedChat].avatar+'.jpg'" alt="">
+                            <div class="user">
+                                <span class="nome">{{contacts[clickedChat].name}}</span>
+                                <br>
+                                <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice(11)}}</span>
+                            </div>
+                        <!--end profile  -->
+                    </div>
+                    <!--end chat-contact-options -->
+
+                    <!-- chatmode-options  -->
+                    <div class="options my-profile">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <!--end chatmode-options  -->
                 </div>
                 <!--end chat-contact-options -->
 
-                <!-- chatmode-options  -->
-                <div class="options my-profile">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-paperclip"></i>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </div>
-                <!--end chatmode-options  -->
 
-                </div>
-
+                <!-- messages-container -->
                 <div class="messages-container">
+                    <!-- messages  -->
                     <div class="messages">
                         <div v-for=" (sms, index) in contacts[clickedChat].messages" class="smscontainer " :class="sms.status">
                             <div class="sms" :class="sms.status">
@@ -129,15 +132,18 @@
                                 <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>
                             </div>
                         </div>
-                        
-                        
                     </div>
+                    <!--end messages  -->
+
+                    <!-- write-tools  -->
                     <div class="write-tools">
                         <i class="fa-solid fa-face-laugh-squint"></i>
                         <input type="text" v-model="inputSms.message" @keyup.enter="sendSms()" placeholder="Scrivi un messaggio">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
+                    <!--end write-tools  -->
                 </div>
+                <!--end messages-container -->
 
             </div>
             <!--END THE CHAT  -->
