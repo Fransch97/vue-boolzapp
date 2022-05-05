@@ -248,11 +248,10 @@ input{
 
 .sms.sent{
     background-color: #d2f5b7;
-    position: relative;
-    left: 60%;
 }
-/* .sms.sent span{
-} */
+.smscontainer.sent{
+    text-align: end;
+}
 /* end messages-container */
 
 
