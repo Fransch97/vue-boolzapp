@@ -77,7 +77,7 @@
 
                 <!-- open-chronology -->
                 <div  class="open-chronology">
-                    <div v-for="(contact, index) in contacts" class="profile-openchat">
+                    <div v-for="(contact, index) in contacts" @click="clickedChat = index" class="profile-openchat">
                         <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
