@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <!-- VUE.JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--END VUE.JS  -->
+
     <!-- FONTAWESOME  -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css' integrity='sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==' crossorigin='anonymous'/>
     <!--END FONTAWESOME  -->
+
     <!-- CSS  -->
     <link rel="stylesheet" href="style.css">
     <!--END CSS  -->
@@ -70,7 +75,19 @@
                 </div>
                 <!-- end search tools -->
 
-
+                <!-- open-chronology -->
+                <div  class="open-chronology">
+                    <div v-for="(contact, index) in contacts" class="profile-openchat">
+                        <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
+                        <div class="user">
+                            <span class="nome">{{contact.name}}</span>
+                            <br>
+                            <span class="last-sms">{{contact.messages[1].message}}</span>
+                        </div>
+                        <div class="date"><span>{{contact.messages[1].date.slice( 0, 11)}}</span></div>
+                    </div>
+                </div>
+                <!--END open-chronology -->
 
             </div>
             <!--END CHATS  -->
@@ -78,5 +95,9 @@
         <!-- END APP  -->
     </main>
     <!-- END MAIN  -->
+
+    <!-- SCRIPT  -->
+    <script src="js/contacts-boolzapp.js"></script>
+    <!--END SCRIPT  -->
 </body>
 </html>

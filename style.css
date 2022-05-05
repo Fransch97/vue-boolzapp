@@ -31,10 +31,14 @@ header{
     background-color: white;
 }
 
-/* CHATS  */
+/*APP CHAT'S  */
 .app-chats{
     width: 30%;
     border-right: solid 1px rgb(229, 225, 225);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 /* profile and options */
 .profile-options{
@@ -116,5 +120,47 @@ img{
 input{
     flex-grow: 1;
 }
+/*end search-tool */
+
+
+/*open-chronology */
+.open-chronology{
+    flex-shrink: 1;
+    overflow: auto;
+}
+.profile-openchat{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    /* background-color: #8edafc; */
+}
+
+.profile-openchat.active{
+    background-color: #e9eaea;
+
+}
+.profile-openchat img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.last-sms,.date span{
+    color: #cacbce;
+}
+.profile-openchat .user{
+    flex-grow: 1;
+
+}
+.profile-openchat .user .nome{
+    font-size: 20px;
+}
+.profile-openchat .user,.date{
+    height: 60px;
+}
+/*END open-chronology */
+
+
+/*END APP CHAT'S  */
+
 
 /*END APP  */
