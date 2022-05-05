@@ -202,6 +202,10 @@ input{
 }
 .messages{
     flex-grow: 1;
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    /* background-color: #009688; */
 }
 .write-tools{
     display: flex;
@@ -218,6 +222,37 @@ input{
     padding: 15px 20px;
     border-radius: 8px;
 }
+
+
+.sms{
+    vertical-align: middle;
+    background-color: white;
+    display: inline-block;
+    padding:0 10px;
+    width: 350px;
+    border-radius:10px ;
+    text-align: end;
+    margin-top: 10px;
+    position: relative;
+    left: 0;
+}
+.sms p{
+    text-align: start;
+    padding: 20px 10px 0 10px;
+}
+.sms span{
+    display: block;
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.sms.sent{
+    background-color: #d2f5b7;
+    position: relative;
+    left: 60%;
+}
+/* .sms.sent span{
+} */
 /* end messages-container */
 
 
