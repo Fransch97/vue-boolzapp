@@ -167,7 +167,7 @@ const app = new Vue({
             }
         ],
         //END bootzapp
-
+        clickedChat : 0
     },
 
     methods: {

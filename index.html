@@ -34,9 +34,9 @@
 
                     <!-- profile  -->
                     <div class="my-profile">
-                        <img src="" alt="">
+                        <img src="img/avatar_io.jpg" alt="">
                         <div class="user">
-                            <span class="nome">Name</span>
+                            <span class="nome">Sofia</span>
                             <!-- <br>
                             <span class="date">Ultimo accesso oggi alle </span> -->
                         </div>
@@ -91,6 +91,33 @@
 
             </div>
             <!--END CHATS  -->
+
+
+
+
+            <!-- THE CHAT MODE -->
+            <div class="chatmode">
+                <div class="chat-contact-options">
+                    <!-- profile chatmode -->
+                    <div class="profile-chatmode ">
+                        <img :src="'img/avatar'+contacts[clickedChat].avatar+'.jpg'" alt="">
+                        <div class="user">
+                            <span class="nome">{{contacts[clickedChat].name}}</span>
+                            <br>
+                            <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice( 0, 11)}}</span>
+                        </div>
+                    </div>
+                    <!--end profile  -->
+                </div>
+
+            </div>
+            <!--END THE CHAT  -->
+
+
+
+
+
+
         </div>
         <!-- END APP  -->
     </main>
