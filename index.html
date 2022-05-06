@@ -73,7 +73,9 @@
 
                 <!-- open-chronology -->
                 <div  class="open-chronology">
-                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.toLowerCase().includes(search) || contact.name.charAt(0).includes(search) " @click="clickedChat = index" class="profile-openchat">
+                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.toLowerCase().includes(search) || contact.name.charAt(0).includes(search) " @click="clickedChat = index" class="profile-openchat"
+                    :class="index === clickedChat ? 'open':''"
+                    >
                         <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
