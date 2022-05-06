@@ -78,9 +78,11 @@
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
                             <br>
-                            <span class="last-sms">{{contact.messages[contact.messages.length - 1].message}}</span>
+                            <span v-if="contact.messages.length > 0 " class="last-sms">{{contact.messages[contact.messages.length - 1].message}}</span>
+                            <span v-else=" " class="last-sms">Nessun messaggio</span>
                         </div>
-                        <div class="date"><span>{{contact.messages[contact.messages.length - 1].date.slice(11).slice(0,-3)}}</span></div>
+                        <div v-if="contact.messages.length > 0 " class="date"><span>{{contact.messages[contact.messages.length - 1].date.slice(11).slice(0,-3)}}</span></div>
+                        <span v-else=" " class="last-sms"></span>
                     </div>
                 </div>
                 <!--END open-chronology -->
@@ -101,7 +103,15 @@
                             <div class="user">
                                 <span class="nome">{{contacts[clickedChat].name}}</span>
                                 <br>
-                                <span class="last-sms">{{contacts[clickedChat].messages[contacts[clickedChat].messages.length -1].date.slice(11).slice(0,-3)}}</span>
+                                <span  
+                                class="last-sms"
+                                v-if="contacts[clickedChat].messages.length > 0 "
+                                >
+                                    
+                                    Ultimo accesso 12.00
+                                </span>
+                                <span v-else=" " class="last-sms"></span>
+                                
                             </div>
                         <!--end profile  -->
                     </div>
