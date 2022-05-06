@@ -204,7 +204,8 @@ input{
     flex-grow: 1;
     width: 85%;
     margin: auto;
-    margin-top: 50px;
+    padding: 0 50px;
+    overflow: auto;
     /* background-color: #009688; */
 }
 .write-tools{
@@ -255,6 +256,7 @@ input{
 
 .delete-options{
     position: absolute;
+    top: 10px;
     right: 10px;
     display: none;
     cursor: pointer;

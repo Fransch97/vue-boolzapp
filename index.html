@@ -72,13 +72,13 @@
                     <button class="float-left">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input class="float-left" @keyup.enter="consolelog" v-model = "search"type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input class="float-left"  v-model = "search"type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <!-- end search tools -->
 
                 <!-- open-chronology -->
                 <div  class="open-chronology">
-                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.includes(search) || contact.name.charAt(0).includes(search) " @click="clickedChat = index" class="profile-openchat">
+                    <div v-for="(contact, index) in contacts" v-if=" search === '' || contact.name.toLowerCase().includes(search) || contact.name.charAt(0).includes(search) " @click="clickedChat = index" class="profile-openchat">
                         <img :src="'img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>

@@ -176,7 +176,17 @@ const app = new Vue({
         },
         search :"",
         hideChevron: false,
-        bot: ["Ottimo!", "Ma non mi dire", "Grande", "Come stai?", "Ciao!", "Va bene", "Perchè no..." , "Scusami ora non ho tempo ti scrivo dopo","Sono a lavoro ti richiamo!", "mamma mia"]
+        bot: [
+            "Ottimo!", 
+            "Ma non mi dire ",
+            "Grande",
+            "Come stai ?",
+            "Ciao!",
+            "Va bene'",
+            "Perchè no..." ,
+            "Scusami ora non ho tempo ti scrivo dopo",
+            "Sono a lavoro ti richiamo!", 
+            "mamma mia"]
 
     },
     
@@ -208,6 +218,8 @@ const app = new Vue({
             this.contacts[this.clickedChat].messages.push(topush)
             this.inputSms.message = ""
 
+            const sendSmS = new Audio('effects/send-sms.mp3')
+            sendSmS.play()
             setTimeout(()=>{this.botsmsers()}, 2000)
 
         },
@@ -246,7 +258,8 @@ const app = new Vue({
                     status: 'received'
             }
             this.contacts[this.clickedChat].messages.push(messageFromBot)
-
+            const recivedSmS = new Audio('effects/recived-sms.mp3')
+            recivedSmS.play()
 
         }
 
