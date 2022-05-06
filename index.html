@@ -83,7 +83,7 @@
                         <div class="user">
                             <span class="nome">{{contact.name}}</span>
                             <br>
-                            <span class="last-sms">{{contact.messages[1].message}}</span>
+                            <span class="last-sms">{{contact.messages[contact.messages.length - 1].message}}</span>
                         </div>
                         <div class="date"><span>{{contact.messages[1].date.slice(11)}}</span></div>
                     </div>
