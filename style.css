@@ -204,7 +204,7 @@ input{
     flex-grow: 1;
     width: 85%;
     margin: auto;
-    padding: 0 50px;
+    padding: 50px 0;
     overflow: auto;
     /* background-color: #009688; */
 }

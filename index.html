@@ -106,7 +106,7 @@
                             <div class="user">
                                 <span class="nome">{{contacts[clickedChat].name}}</span>
                                 <br>
-                                <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice(11)}}</span>
+                                <span class="last-sms">{{contacts[clickedChat].messages[1].date.slice(11).slice(0,-3)}}</span>
                             </div>
                         <!--end profile  -->
                     </div>
@@ -142,7 +142,7 @@
                                     </ul>
                                 </div>
                                 <p>{{smsi.message}}</p>
-                                <span>{{contacts[clickedChat].messages[index].date.slice(11)}}</span>
+                                <span>{{contacts[clickedChat].messages[index].date.slice(11).slice(0,-3)}}</span>
                             </div>
                         </div>
                     </div>
