@@ -85,7 +85,7 @@
                             <br>
                             <span class="last-sms">{{contact.messages[contact.messages.length - 1].message}}</span>
                         </div>
-                        <div class="date"><span>{{contact.messages[1].date.slice(11)}}</span></div>
+                        <div class="date"><span>{{contact.messages[contact.messages.length - 1].date.slice(11).slice(0,-3)}}</span></div>
                     </div>
                 </div>
                 <!--END open-chronology -->
