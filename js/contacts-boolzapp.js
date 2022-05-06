@@ -226,7 +226,8 @@ const app = new Vue({
 
         deletes(index){
             console.log(index)
-            if(confirm("Vuoi cancellare il messaggio?"))this.contacts[this.clickedChat].messages[index].message = ""
+            console.log(this.clickedChat)
+            if(confirm("Vuoi cancellare il messaggio?"))this.contacts[this.clickedChat].messages.splice(index,1)
         },
 
         botsmsers(){
