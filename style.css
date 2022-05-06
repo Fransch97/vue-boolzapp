@@ -6,27 +6,31 @@
     font-family: sans-serif;
 }
 body{
-    background-color: #dadad3;
+    /* background-color: #dadad3; */
+    background: linear-gradient( 
+        to bottom, 
+        rgb(0, 138, 125) 20%, 
+        rgba(255,255,255) 0%);
+        max-height: 100vh;
+        padding: 30px;
 }
 /*END GENERALS  */
 /* 569486 */
 
 /* HEADER  */
-header{
-    background-color: #009688;
+/* header{
+    
     height: 15vh;
-}
+} */
 
 /*END HEADER  */
 
 /* APP  */
 
 #app{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 100%;
+    
+    margin: auto;
+    height: 95vh;
     width: 80%;
     background-color: white;
     min-width: 930px;
@@ -177,7 +181,7 @@ input{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    flex-grow: 0;
+    height: 100%;
 }
 .chat-contact-options{
     background-color: #EAEAEA;
@@ -202,14 +206,15 @@ input{
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 .messages{
-    /* flex-grow: 1; */
+    flex-grow: 1;
     width: 85%;
     height: calc(100% - (80 + 68px)) ;
     margin: auto;
     padding: 50px 0;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* background-color: #009688; */
 }
 .write-tools{

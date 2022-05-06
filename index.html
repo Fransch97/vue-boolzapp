@@ -111,7 +111,7 @@
                                     Ultimo accesso 12.00
                                 </span>
                                 <span v-else=" " class="last-sms"></span>
-                                
+                                <audio src=""></audio>
                             </div>
                         <!--end profile  -->
                     </div>
@@ -153,16 +153,17 @@
                     </div>
                     <!--end messages  -->
 
-                    <!-- write-tools  -->
-                    <div class="write-tools">
-                        <i class="fa-solid fa-face-laugh-squint"></i>
-                        <input type="text" v-model="inputSms.message" @keyup.enter="sendSms()" placeholder="Scrivi un messaggio">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-                    <!--end write-tools  -->
+                    
                 </div>
                 <!--end messages-container -->
 
+                <!-- write-tools  -->
+                <div class="write-tools">
+                    <i class="fa-solid fa-face-laugh-squint"></i>
+                    <input type="text" v-model="inputSms.message" @keyup.enter="sendSms()" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+                <!--end write-tools  -->
             </div>
             <!--END THE CHAT  -->
 
